@@ -4,12 +4,14 @@
     --primary-color: #f78636;
     ---text-color: #DDC6B6;
 }
+
 .dark-theme {
     --background-color: white;
     --second-background: rgb(248, 248, 248);
     --primary-color: #f78636;
     ---text-color: black;
 }
+
 * {
     list-style-type: none;
     margin: 0;
@@ -21,26 +23,32 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
 html {
     overflow-x: hidden;
 }
+
 body {
     background-color: var(--background-color);
     color: var(---text-color);
 }
+
 section {
     min-height: 100vh;
     padding: 6rem 5rem 0;
 }
+
 .heading {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 5rem;
 }
-.heading > h2 {
+
+.heading>h2 {
     line-height: 1.2;
 }
-.heading > h2 > span {
+
+.heading>h2>span {
     color: var(--primary-color);
 }
 
@@ -56,6 +64,7 @@ section {
     letter-spacing: .1rem;
     transition: .8s;
 }
+
 .btn:hover {
     box-shadow: none;
 }
@@ -72,32 +81,38 @@ section {
     align-items: center;
     z-index: 100;
 }
+
 .logo {
     font-size: 2rem;
-    color: var(---text-color);
+    color: var(--primary-color);
     font-weight: 800;
     cursor: default;
 }
-#menu-icon { 
+
+#menu-icon {
     font-size: 3rem;
-    display:none;
+    display: none;
 }
-.navbar > li {
+
+.navbar>li {
     position: relative;
     display: inline;
-    font-size: 1.3rem;  
+    font-size: 1.3rem;
     margin-left: 2.5rem;
 }
-.navbar > li > a {
-    color: var(---text-color); 
+
+.navbar>li>a {
+    color: var(---text-color);
     transition: .3s;
 }
-.navbar > li > a:hover,
-.navbar > li > a.active-btn {
+
+.navbar>li>a:hover,
+.navbar>li>a.active-btn {
     color: var(--primary-color);
 }
-.navbar > li > a.active-btn::after,
-.navbar > li > a::after {
+
+.navbar>li>a.active-btn::after,
+.navbar>li>a::after {
     content: " ";
     display: block;
     background: var(--primary-color);
@@ -105,18 +120,22 @@ section {
     left: 0;
     height: 2px;
     width: 0;
-    
+
 }
-.navbar > li > a.active-btn::after {
+
+.navbar>li>a.active-btn::after {
     width: 100%;
 }
-.navbar > li > a::after {
+
+.navbar>li>a::after {
     transition: .4s;
 }
-.navbar > li > a:hover::after {
+
+.navbar>li>a:hover::after {
     width: 100%;
 }
-h1 > span {
+
+h1>span {
     color: var(--primary-color);
     font-weight: 800;
 }
@@ -126,20 +145,23 @@ h1 > span {
     justify-content: space-between;
     align-items: center;
 }
-#home > .left {
-    height: 45vh;
+
+#home>.left {
+    height: 65vh;
     width: 45vw;
 }
-#home > .left > h1 {
+
+#home>.left>h1 {
     font-size: 2.5rem;
     font-weight: 900;
 }
-#home > .left > p {
+
+#home>.left>p {
     margin-top: .7rem;
     font-size: 1.3rem;
 }
 
-#home > .left > .social-media > a {
+#home>.left>.social-media>a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -154,73 +176,86 @@ h1 > span {
     transition: .5s;
 }
 
-#home > .left > .social-media > a:hover {
+#home>.left>.social-media>a:hover {
     background: var(--primary-color);
     color: var(---text-color);
     box-shadow: 0 0 1rem var(--primary-color);
 }
-#home > .right > img {
+
+#home>.right>img {
     height: 65vh;
     width: 35vw;
-} 
+}
+
 #about {
     background: var(--second-background);
 }
 
-#about > .about-content {
+#about>.about-content {
     display: flex;
     justify-content: space-between;
     padding: 0 0 5rem;
 }
-#about > .about-content > .left {
+
+#about>.about-content>.left {
     flex: 1;
     padding-right: 5rem;
 }
-#about > .about-content > .left > .btn {
+
+#about>.about-content>.left>.btn {
     margin-top: .5rem;
 }
-#about > .about-content > .left > h4 {
+
+#about>.about-content>.left>h4 {
     font-size: 1.5rem;
-    
+
 }
-#about > .about-content > .left > p {
+
+#about>.about-content>.left>p {
     padding: 1rem .7rem;
     font-size: 1.1rem;
 }
-#about > .about-content > .right {
+
+#about>.about-content>.right {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
-    grid-gap: ;
 }
-#about > .about-content > .right > .container-item {
+
+#about>.about-content>.right>.container-item {
+    height: 30vh;
     border: 1px solid var(---text-color);
     border-radius: 5px;
-    box-shadow: 1px 2px 15px tgba(0,0,0,.1);
+    box-shadow: 1px 2px 15px tgba(0, 0, 0, .1);
     transition: .2s;
 }
-#about > .about-content > .right > .container-item:hover {
+
+#about>.about-content>.right>.container-item:hover {
     transform: translateX(-2px);
     border: 1px solid var(--primary-color);
-    box-shadow: 1px 2px 15px tgba(0,0,0,.3);
+    box-shadow: 1px 2px 15px tgba(0, 0, 0, .3);
 }
-#about > .about-content > .right > .container-item > .content-text {
-    padding: 1.5rem; 
+
+#about>.about-content>.right>.container-item>.content-text {
+    padding: 1.5rem;
 }
-#about > .about-content > .right > .container-item > .content-text > .large-text {
+
+#about>.about-content>.right>.container-item>.content-text>.large-text {
     font-size: 3rem;
     font-weight: 700;
     color: var(--primary-color)
 }
-#about > .about-content > .right > .container-item > .content-text > .small-text {
+
+#about>.about-content>.right>.container-item>.content-text>.small-text {
     padding-left: 3rem;
     text-transform: uppercase;
     font-size: 1.2rem;
     letter-spacing: 2px;
     position: relative;
 }
-#about > .about-content > .right > .container-item > .content-text > .small-text::before {
+
+#about>.about-content>.right>.container-item>.content-text>.small-text::before {
     content: "";
     position: absolute;
     left: 0;
@@ -230,16 +265,18 @@ h1 > span {
     background: var(--primary-color);
 }
 
-#services > .services-container {
+#services>.services-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
 }
-#services > .services-container > .service-item {
+
+#services>.services-container>.service-item {
     flex: 1 1 20rem;
     background: var(--second-background);
+    height: 60vh;
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     border: .2rem solid var(--background-color);
@@ -247,18 +284,24 @@ h1 > span {
     position: relative;
     transition: .5s;
 }
-#services > .services-container > .service-item:hover {
+
+#services>.services-container>.service-item:hover {
     border-color: var(--primary-color);
     transform: scale(1.02);
 }
-#services > .services-container > .service-item > i {
+
+#services>.services-container>.service-item>i {
+    /* border: .2rem solid var(--primary-color); */
+    margin-bottom: .8rem;
     font-size: 4.7rem;
     color: var(--primary-color);
 }
-#services > .services-container > .service-item > h3 {
+
+#services>.services-container>.service-item>h3 {
     font-size: 1.8rem;
 }
-#services > .services-container > .service-item > p {
+
+#services>.services-container>.service-item>p {
     font-size: 1.1rem;
     margin: 1rem 0 1.7rem;
 }
@@ -266,39 +309,46 @@ h1 > span {
 #porfolio {
     background: var(--second-background);
 }
-#porfolio > .heading {
+
+#porfolio>.heading {
     margin-bottom: 4rem;
 }
 
-#porfolio > .container {
+#porfolio>.container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     gap: 1rem;
     padding-bottom: 1rem;
 }
-#porfolio > .container > .item{
+
+#porfolio>.container>.item {
+    border: .1px solid var(--primary-color);
+    box-shadow: 0 0 .3rem var(--primary-color);
     height: 15rem;
     position: relative;
     border-radius: 1rem;
     box-sizing: 0 0 1rem var(--background-color);
     overflow: hidden;
 }
-#porfolio > .container > .item > img {
+
+#porfolio>.container>.item>img {
     width: 100%;
-    height: 15rem; 
+    height: 15rem;
     transition: .3s;
 }
-#porfolio > .container > .item:hover > img {
+
+#porfolio>.container>.item:hover>img {
     transform: scale(1.1);
 }
 
-#porfolio > .container > .item > .content {
+#porfolio>.container>.item>.content {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1), var(--primary-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--primary-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,21 +356,24 @@ h1 > span {
     text-align: center;
     padding: 0 4rem;
     color: white;
-    transform: translateY(100%); 
+    transform: translateY(100%);
     transition: .5s;
 }
-#porfolio > .container > .item:hover > .content {
+
+#porfolio>.container>.item:hover>.content {
     transform: translateY(0)
 }
 
-#porfolio > .container > .item > .content > h4 {
+#porfolio>.container>.item>.content>h4 {
     font-size: 2.5rem;
 }
-#porfolio > .container > .item > .content > p {
+
+#porfolio>.container>.item>.content>p {
     font-size: 1rem;
     margin: .3rem 0 1rem;
 }
-#porfolio > .container > .item > .content > a {
+
+#porfolio>.container>.item>.content>a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -329,25 +382,30 @@ h1 > span {
     background: var(---text-color);
     border-radius: 50%;
 }
-#porfolio > .container > .item > .content > a > i {
+
+#porfolio>.container>.item>.content>a>i {
     font-size: 1.4rem;
     color: var(--second-background);
 }
-#contact > .heading{
+
+#contact>.heading {
     margin-bottom: 4rem;
 }
-#contact > form {
+
+#contact>form {
     max-width: 60rem;
     margin: 0 auto;
     text-align: center;
 }
-#contact > form  > .input-box {
+
+#contact>form>.input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-#contact > form  > .input-box > input,
-#contact > form  > textarea {
+
+#contact>form>.input-box>input,
+#contact>form>textarea {
     width: 100%;
     padding: .7rem;
     font-size: 1.5rem;
@@ -356,15 +414,16 @@ h1 > span {
     border-radius: .7rem;
     margin: .2rem 0;
 }
-#contact > form  > .input-box > input {
+
+#contact>form>.input-box>input {
     width: 49.5%;
 }
-#contact > form  > textarea {
+
+#contact>form>textarea {
     resize: none;
 }
-#contact > form  > .btn {
+
+#contact>form>.btn {
     margin-top: 1.5rem;
     cursor: pointer;
 }
-
-
